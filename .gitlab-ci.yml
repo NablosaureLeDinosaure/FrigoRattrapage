@@ -5,9 +5,8 @@ build:
   stage: build
   image: node:latest
   script:
-vscript:
-  - npm ci --only=production
-  - npm run build
+    - npm ci --only=production
+    - npm run build
 
   artifacts:
     paths:
