@@ -1,16 +1,17 @@
 stages:
   - build
   - package
+
 build:
   stage: build
   image: node:latest
   script:
-    - npm ci --only=production
+    - npm ci
     - npm run build
-
   artifacts:
     paths:
       - dist/
+
 package:
   stage: package
   image: docker:latest
